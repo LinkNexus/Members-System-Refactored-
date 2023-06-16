@@ -1,0 +1,255 @@
+body {
+    font-family: sans-serif;
+    background: url("../Assets/Image1.jpg") fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 1400px){
+    body {
+        background: url("../Assets/Background.png") fixed;
+    }
+}
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 100px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background: black;
+}
+
+.nav-bar>a{
+    margin-right: 30px;
+    font-size: 50px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-bar>a:hover{
+    color: rgba(255, 255, 255);
+}
+
+.nav-bar div{
+    font-size: 20px !important;
+    display: flex;
+    width: 190px;
+    justify-content: space-between;
+}
+
+.nav-bar div a{
+    color: red;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 110px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.nav-bar div a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    box-shadow: 0 0 5px red,
+    0 0 25px red,
+    0 0 50px red,
+    0 0 100px red;
+}
+
+.nav-bar div a span{
+    margin-left: 5px;
+}
+
+.error-msg{
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin: 40px;
+    padding: 20px;
+}
+
+.error-msg li{
+    color: red;
+}
+
+.alert-msg{
+    background: rgba(0, 0, 0, 0.6);
+    color: red;
+    margin: 40px;
+    padding: 20px;
+}
+
+.success-msg{
+    background: rgba(0, 0, 0, 0.6);
+    color: green;
+    margin: 40px;
+    padding: 20px;
+}
+
+.info-box{
+    width: 400px;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    color: white;
+}
+
+.info-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.info-box a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: red;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 135px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.info-box a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    box-shadow: 0 0 5px red,
+    0 0 25px red,
+    0 0 50px red,
+    0 0 100px red;
+}
+
+.info-box .info{
+    margin-bottom: 30px;
+}
+
+.info a{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+}
+
+.info .material-symbols-outlined{
+    font-size: 12px; !important;
+}
+
+.login-box {
+    width: 400px;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: red;
+    font-size: 12px;
+}
+
+.login-box form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: red;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background: inherit;
+    border: none;
+}
+
+.login-box button:hover {
+    background: red;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red,
+    0 0 25px red,
+    0 0 50px red,
+    0 0 100px red;
+}
+
+.login-box a{
+     color: red;
+     text-decoration: none;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 40px;
+     width: 150px;
+     border-radius: 5px;
+     margin-top: 20px;
+     transition: 0.5s;
+ }
+
+.login-box a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    box-shadow: 0 0 5px red,
+    0 0 25px red,
+    0 0 50px red,
+    0 0 100px red;
+}
