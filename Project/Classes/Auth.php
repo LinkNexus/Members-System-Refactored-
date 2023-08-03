@@ -45,10 +45,15 @@ class Auth
             ]
         );
 
+        $directory = 'Project'; /* The name of the directory where the entire project is */
+
+        $full_URL = "http". (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 's' : '') .'://'. $_SERVER['HTTP_HOST'] . '/'. (empty($directory) ? '' : $directory .'/') .'Confirm.php';
+
+
         try
         {
             $user_id = $link->lastInsertId();
-            App::sendWithGmail($email, 'Account Confirmation', "In order to confirm your Account, click on this link\n\nhttp://localhost/Mini-Blog/Confirm.php?id=$user_id&token=$token");
+            App::sendWithGmail($email, 'Account Confirmation', "In order to confirm your Account, click on this link\n\n$full_URL?id=$user_id&token=$token");
         } catch(Exception $e)
         {
             echo $e->getMessage();
@@ -153,8 +158,13 @@ class Auth
                 'id' => $result->id
             ]);
 
+            $directory = 'Mini_Blog'; /* The name of the directory where the entire project is */
+
+            $full_URL = "http". (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 's' : '') .'://'. $_SERVER['HTTP_HOST'] . '/'. (empty($directory) ? '' : $directory .'/') .'ResetPassword.php';
+
+
             try {
-                App::sendWithGmail($email, 'Reset of your Password', "In order to reset your Password, click on this link\n\nhttp://localhost/Mini-Blog/ResetPassword.php?id=$result->id&token=$reset_token");
+                App::sendWithGmail($email, 'Reset of your Password', "In order to reset your Password, click on this link\n\n$full_URL?id=$result->id&token=$reset_token");
             } catch (Exception $e)
             {
                 echo $e->getMessage();
