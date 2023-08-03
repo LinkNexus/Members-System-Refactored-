@@ -107,8 +107,8 @@ class App
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
-            $username = "nkenengnunlafrancklevy@gmail.com"; // gmail email
-            $password = "vqitwblvefidajdw"; // app password
+            $username = ""; // gmail email
+            $password = ""; // app password
 
             $mail->Username = $username;
             $mail->Password = $password;
